@@ -27,9 +27,11 @@ public class PlanetAnimator : MonoBehaviour
 
     [SerializeField]  WoodCounter woodCounter; 
     [SerializeField] Animator animator;
+
+    [SerializeField] GameObject dieGameObject;
     private bool isPlaying = false;
 
-    private int number1 = 0;
+    [SerializeField] int number1 = 0;
     private bool check = true;
 
     void Start()
@@ -39,56 +41,33 @@ public class PlanetAnimator : MonoBehaviour
 
     void Update()
     {
-        if (number1 < woodCounter.childCount)
+        //애니메이션 속도 
+        animator.speed = 0.3f;
+        Debug.Log("애니메이션 코드에서 알려드림 : " + woodCounter.childCount);
+
+        if (number1 == 0 && check == true)
+        {
+            animator.Play("Idle");
+            number1 = woodCounter.childCount;
+        }
+        else if (number1 < woodCounter.childCount)
         {
             //Happy 애니메이션 재생
+            animator.Play("Happy");
             number1 = woodCounter.childCount;
-            return;
         }
         else if (number1 > woodCounter.childCount)
         {
             //Anxious 애니메이션 재생
             number1 = woodCounter.childCount;
-
-            if (number1 == 0) { check = false; } 
-
-            return;
+            if (number1 == 0) { check = false; }
         }
         else if (woodCounter.childCount == 0 && check == false)
         {
-            //Die 애니메이션 재생 
-            return; 
+            animator.Play("Die");
+            dieGameObject.SetActive(true);
+            gameObject.SetActive(false);
         }
-            
-        // if (woodCounter.childCount != 0)
-        // {
-        //     StartCoroutine(PlayHappyThenIdle());
-        // }
-        // else if (woodCounter.childCount == 0)
-        // {
-        //     return;
-        // }
-        // else if()
-        // if (Input.GetKeyDown(KeyCode.Space) && !isPlaying)
-        //     {
-        //         StartCoroutine(PlayHappyThenIdle());
-        //     }
-    }
-
-    IEnumerator PlayHappyThenIdle()
-    {
-        isPlaying = true;
-
-        animator.speed = 0.5f;         // 속도 느리게
-        animator.Play("Happy");        // Happy 애니메이션 실행
-        Debug.Log("애니메이션 코드에서 알려드림 : " + woodCounter.childCount);
-
-        yield return new WaitForSeconds(1f); // 1초 기다림
-
-        animator.speed = 1f;           // 속도 원래대로
-        animator.Play("Idle");         // Idle로 복귀
-
-        isPlaying = false;
     }
 }
 

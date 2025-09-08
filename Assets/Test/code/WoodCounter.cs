@@ -29,19 +29,25 @@ public class WoodCounter : MonoBehaviour
     {
         while (true)
         {
-            int currentChildCount = mainGameObject.transform.childCount;
+            int currentChildCount = mainGameObject.transform.childCount-2;
 
             if (currentChildCount != childCount)
             {
                 if (currentChildCount > childCount)
+                {
                     Debug.Log("자식 추가됨!");
+                }
                 else
+                {
                     Debug.Log("자식 제거됨!");
+                }
 
-                childCount = currentChildCount; 
+                childCount = currentChildCount;
             }
 
             yield return new WaitForSeconds(0.1f); // 0.1초마다 체크
+            
+            Debug.Log("현재 나무 갯수 :" + childCount);
         }
     }
 }
