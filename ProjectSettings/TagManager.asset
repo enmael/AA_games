@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PinHead
   - Center
+  - Space
   layers:
   - Default
   - TransparentFX
