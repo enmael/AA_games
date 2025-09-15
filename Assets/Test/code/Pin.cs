@@ -78,7 +78,7 @@ public class Pin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // 🎯 Center에 부딪히면 고정
+        //  Center에 부딪히면 고정
         if (collision.gameObject.CompareTag("Center"))
         {
             isPined = true;
@@ -86,7 +86,7 @@ public class Pin : MonoBehaviour
             //rb.gravityScale = 0f; // 중력 끔
             rb.velocity = Vector2.zero; // 속도 초기화
         }
-        // 🎯 Pin과 부딪히면 떨어지게 처리
+        //  Pin과 부딪히면 떨어지게 처리
         else if (collision.gameObject.CompareTag("PinHead"))
         {
             isPined = true;
