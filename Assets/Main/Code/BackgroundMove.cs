@@ -1,3 +1,10 @@
+/*
+    생성일자 : 2025.09.15
+    파일이름 : BackgroundMove.cs
+    생성자:
+    내용: 지정한값으로 배경을 이동속도를 조절하는 코드이다 
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;

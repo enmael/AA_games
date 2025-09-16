@@ -1,3 +1,10 @@
+/*
+    생성일자 : 2025.09.15
+    파일이름 : UiManger.cs
+    생성자:
+    내용: 시작 ui를 관리하는 코드이다.
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +18,13 @@ public class UiManger : MonoBehaviour
     [SerializeField] Button settingsButton;
     [SerializeField] Button creditsButton;
 
+    //[SerializeField] public bool gameStart = false;
+
+    // public bool GameStart
+    // {
+    //     get { return gameStart; }
+    // }
+
     void Start()
     {
         startButton.onClick.AddListener(OnStartClicked);
@@ -21,6 +35,7 @@ public class UiManger : MonoBehaviour
     void OnStartClicked()
     {
         UiObject.SetActive(false); 
+        //gameStart = true;
     }
 
     void OnSettingsClicked()

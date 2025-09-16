@@ -1,3 +1,10 @@
+/*
+    생성일자 : 2025.09.15
+    파일이름 : BackgroundManager.cs
+    생성자:
+    내용: BackgroundMove에값을 조정하는 코드이다.
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

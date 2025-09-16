@@ -1,3 +1,10 @@
+/*
+    생성일자 : 2025.09.15
+    파일이름 : BackgroundRepeating.cs
+    생성자:
+    내용: 배경을 반복하여 배경이 움직이는것처럼 보이게 하는 코드이다.
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
