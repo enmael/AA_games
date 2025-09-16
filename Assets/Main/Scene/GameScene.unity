@@ -1754,6 +1754,7 @@ GameObject:
   - component: {fileID: 2133259123}
   - component: {fileID: 2133259124}
   - component: {fileID: 2133259125}
+  - component: {fileID: 2133259126}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1826,6 +1827,22 @@ MonoBehaviour:
   planet: {fileID: 921843183}
   planetSpeed: 0
   test: 0
+--- !u!114 &2133259126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133259121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c3c7bd72fef445fb7adb06676c32c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzlManager: {fileID: 2133259125}
+  score: 0
+  mainGameObject: {fileID: 921843183}
+  childCount: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

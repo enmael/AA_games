@@ -63,7 +63,7 @@ public class ScoreManager : MonoBehaviour
     {
         while (true)
         {
-            if (score == childCount)
+            if (score == childCount && childCount>0)
             {
                 Debug.Log("클리어");
             }
